@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search for national parks in an area</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Breaking News Search</h1>
+        
+        <form id="js-form">
+            <label for="search-term">Search Area</label>
+            <input type="text" name="search-term" id="js-search-term" placeholder="News Category ex. Politics, Fashion, Weather" required>
+    
+            <input type="submit" value="Search!">
+        </form>
+    </div>
+    <!-- News Results -->
+    <section id="results" class="hidden">
+        <h2>News</h2>
+        <ul id="results-list">
+        </ul>
+    </section>   
+    <!-- NYT Results -->
+    <section id="NYTresults" class="hidden">
+        <h2>New York Times</h2>
+        <ul id="NYTresults-list">
+        </ul>
+    </section>  
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="nyt.js"></script>
+</body>
