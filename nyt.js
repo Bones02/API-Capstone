@@ -1,8 +1,8 @@
 'use strict';
 
-const NYTapiKey = "V654y1J5XOJuWFwqjXzn3Ow6EvqnuUjv"
+const NYTapiKey = "V654y1J5XOJuWFwqjXzn3Ow6EvqnuUjv";
 
-const NYTsearchURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
+const NYTsearchURL = 'https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/search/v2/articlesearch.json';
 
 
 function NYTformatQueryParams(params) {
@@ -16,26 +16,26 @@ function NYTdisplayResults(responseJson, maxResults) {
   console.log(responseJson);
   $('#NYTresults-list').empty();
   // iterate through the docs array, stopping at the max number of results
-  for (let i = 0; i < responseJson.docs.length & i<maxResults ; i++){
+  for (let i = 0; i < responseJson.response.docs.length & i<maxResults ; i++){
     // for each video object in the docs
     //array, add a list item to the results 
     //list with the article title, source, author,
     //description, and image
     $('#NYTresults-list').append(
-      `<li><h3><a href="${responseJson.docs[i].web_url}">${responseJson.docs[i].headline.main}</a></h3>
-      <p>${responseJson.docs[i].source}</p>
-      <p>By ${responseJson.docs[i].byline.original}</p>
-      <p>${responseJson.docs[i].snippet}</p>
-      <img src='${responseJson.docs[i].multimedia.url}'>
+      `<li><h3><a href="${responseJson.response.docs[i].web_url}">${responseJson.response.docs[i].headline.main}</a></h3>
+      <p>${responseJson.response.docs[i].source}</p>
+      <p>By ${responseJson.response.docs[i].byline.original}</p>
+      <p>${responseJson.response.docs[i].snippet}</p>
       </li>`
     )};
   //display the results section  
   $('#NYTresults').removeClass('hidden');
 };
 
-function NYTgetNews(query, maxResults=10) {
+function NYTgetNews(query, maxResults=11) {
   const params = {
     q: query,
+    "api-key": NYTapiKey,
     language: "en",
   };
   const NYTqueryString = NYTformatQueryParams(params)
@@ -44,8 +44,8 @@ function NYTgetNews(query, maxResults=10) {
   console.log(url);
 
   const options = {
-    headers: new Headers({
-      "Api-Key": NYTapiKey})
+    //headers: new Headers({
+      //"Authorization": NYTapiKey})
   };
 
   fetch(url, options)
