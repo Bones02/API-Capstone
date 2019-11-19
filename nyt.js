@@ -24,7 +24,7 @@ function NYTdisplayResults(responseJson, maxResults) {
     $('#NYTresults-list').append(
       `<li><h3><a href="${responseJson.response.docs[i].web_url}">${responseJson.response.docs[i].headline.main}</a></h3>
       <p>${responseJson.response.docs[i].source}</p>
-      <p>By ${responseJson.response.docs[i].byline.original}</p>
+      <p>${responseJson.response.docs[i].byline.original}</p>
       <p>${responseJson.response.docs[i].snippet}</p>
       </li>`
     )};
@@ -45,7 +45,7 @@ function NYTgetNews(query, maxResults=11) {
 
   const options = {
     //headers: new Headers({
-      //"Authorization": NYTapiKey})
+    //"Authorization": NYTapiKey})
   };
 
   fetch(url, options)

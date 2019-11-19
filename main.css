@@ -1,33 +1,205 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  button, input[type="text"] {
-    padding: 5px;
-  }
-  
-  button:hover {
-    cursor: pointer;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .error-message {
-      color: red;
-  }
-  
-  .hidden {
-    display: none;
-  }
+@media only screen and (min-width: 320px) {
+    * {
+        box-sizing: border-box;
+    }
 
-  .img {
-      height: 200px;
-      width: 200px;
-  }
+    body {
+        font-family: 'Merriweather', serif;
+        background-color: #444C80;
+    }
+
+    .header {
+        background-color: #8797FF;
+        background-position: 15% 0%;
+        background-attachment: scroll;
+        padding: 20px 0;
+        box-shadow: 0 0 10px black;
+        width:100vw;
+        height: 60vh;
+        justify-content: center;
+    }
+
+    .error-message {
+        color: red;
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+    h1 {
+        font-size: 28px;
+        background-color: #D4D9FF;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        text-align: center
+    }
+
+    h4 {
+        font-size: 18px;
+        text-align: center;
+        color:black;
+        }
+
+    .formpage {
+        text-align: center;
+    }
+
+    #js-form {
+        width: 90vw;
+        background-color: #6A6D80; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        justify-content: center;
+        border-radius: 8%;
+        margin: auto;
+    }
+    
+    #js-search-term {
+        background-color: white;
+        font-size: 14px;
+    }
+
+    #button {
+        display: inline-block;
+        padding: 5px 8px;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: black;
+        background-color: #D4D9FF;
+        border: none;
+        border-radius: 15px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    #results {
+        background-color: white;
+        border-color: black;
+        margin: 10 0 0 0;
+    }
+
+    #NYTresults {
+        background-color: white;
+        border-color: black;
+        margin: 10 0 0 0;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 10px 15px 10px;
+    }
+
+    ul > li::before {
+        content: "\2022";
+        color: #cccccc;
+        display: inline-block; width: 1em;
+        margin-left: -1em
+    }
+
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    img {
+        height: 150px;
+        width: 200px;
+        border: black 1px;
+        border-radius: 8%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 100px;
+    }
+
+    #results {
+        padding: 15px;
+        margin: 20px;
+        width: 45%;
+    }
+
+    #NYTresults {
+        padding: 15px;
+        margin: 20px;
+        width: 45%;
+    }
+
+    h1 {
+        font-size: 56px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    h4 {
+        font-size: 36px;
+    }
+
+    .searchbar {
+        font-size: 36px;
+    }
+
+    #js-search-term {
+        font-size: 36px;
+    }
+
+    #button{
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 64px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 42px;
+    }
+
+    ul {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+    img {
+        height: 200px;
+        width: 250px;
+    }
+}
