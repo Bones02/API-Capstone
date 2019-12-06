@@ -9,22 +9,22 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
+    <section class="header">
         <h1>Breaking News Search</h1>
         <div class= "formpage">
             <form id="js-form">
                 <h4>Enter a search term to get the breaking headlines from multiple new sources. </h4>
                 <div class= "searchbar">
-                    <label for="search-term">New Search</label>
+                    <label for="js-search-term">New Search</label>
                     <input  type="text" name="search-term" id="js-search-term" placeholder="ex. Politics, Obama" required>
                     <input id=button type="submit" value="Search">
                 </div>
             </form>
         </div>
-    </div>
+    </section>
 
     <br>
-    <div class="container">
+    <section class="container">
         <!-- News Results -->
         <div id="results" class="hidden">
             <h2>News</h2>
@@ -37,7 +37,7 @@
             <ul id="NYTresults-list">
             </ul>
         </div>  
-    </div>
+    </section>
 
     <!-- Script -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

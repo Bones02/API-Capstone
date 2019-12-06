@@ -22,7 +22,7 @@ function displayResults(responseJson, maxResults) {
     //list with the article title, source, author,
     //description, and image
     $('#results-list').append(
-      `<li><h3><a href="${responseJson.articles[i].url}">${responseJson.articles[i].title}</a></h3>
+      `<li><h3><a href="${responseJson.articles[i].url}" target="_blank">${responseJson.articles[i].title}</a></h3>
       <p>${responseJson.articles[i].source.name}</p>
       <p>By ${responseJson.articles[i].author}</p>
       <p>${responseJson.articles[i].description}</p>

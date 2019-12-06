@@ -22,7 +22,7 @@ function NYTdisplayResults(responseJson, maxResults) {
     //list with the article title, source, author,
     //description, and image
     $('#NYTresults-list').append(
-      `<li><h3><a href="${responseJson.response.docs[i].web_url}">${responseJson.response.docs[i].headline.main}</a></h3>
+      `<li><h3><a href="${responseJson.response.docs[i].web_url}" target="_blank">${responseJson.response.docs[i].headline.main}</a></h3>
       <p>${responseJson.response.docs[i].source}</p>
       <p>${responseJson.response.docs[i].byline.original}</p>
       <p>${responseJson.response.docs[i].snippet}</p>
