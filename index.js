@@ -26,7 +26,7 @@ function displayResults(responseJson, maxResults) {
       <p>${responseJson.articles[i].source.name}</p>
       <p>By ${responseJson.articles[i].author}</p>
       <p>${responseJson.articles[i].description}</p>
-      <img src='${responseJson.articles[i].urlToImage}'>
+      <img src='${responseJson.articles[i].urlToImage}' alt="Article Image">
       </li>`
     )};
   //display the results section  
